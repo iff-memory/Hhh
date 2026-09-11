@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aakriti — The Birthday Film</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sky"></canvas><div id="grain"></div><div id="cursorGlow"></div>
+<div id="musicHint">♪ Tap anywhere for ambience</div>
+
+<section class="screen active" id="s1">
+  <div class="cinema-title">
+    <p class="kicker">A VERY SMALL FILM ABOUT A VERY IMPORTANT PERSON</p>
+    <h1>Aakriti</h1>
+    <p class="subtitle">aka <i>Kuchupuchu</i></p>
+    <div class="date">28 · 09</div>
+    <button class="enter" id="enter">BEGIN THE STORY <span>→</span></button>
+  </div>
+</section>
+
+<section class="screen" id="s2">
+  <div class="scene">
+    <p class="kicker">SCENE 01 · RESTRICTED ACCESS</p>
+    <h2>Some doors<br><em>need a secret.</em></h2>
+    <p class="body">Three creatures are questionable.<br>One is beautiful. Choose wisely.</p>
+    <div class="creatures">
+      <button data-v="🐸">🐸<small>chaos</small></button>
+      <button data-v="👹">👹<small>mood</small></button>
+      <button data-v="🐷">🐷<small>hungry</small></button>
+      <button data-v="🦋">🦋<small>pretty</small></button>
+    </div>
+    <div id="seq">—　—　—　—</div>
+    <p id="status"></p>
+  </div>
+</section>
+
+<section class="screen" id="s3">
+  <div class="scene wide">
+    <p class="kicker">SCENE 02 · SUBJECT ANALYSIS</p>
+    <h2>The Aakriti<br><em>Phenomenon.</em></h2>
+    <p class="body">A peer-reviewed investigation conducted by absolutely nobody.</p>
+    <div class="stats">
+      <div><span>Cuteness</span><b>97%</b><i style="--w:97%"></i></div>
+      <div><span>Drama</span><b>112%</b><i style="--w:100%"></i></div>
+      <div><span>Chaos</span><b>104%</b><i style="--w:100%"></i></div>
+      <div><span>Reply speed</span><b>13%</b><i style="--w:13%"></i></div>
+      <div><span>Birthday energy</span><b>∞</b><i style="--w:100%"></i></div>
+    </div>
+    <div class="verdict">VERDICT — <strong>dangerously lovable.</strong></div>
+    <button class="next" data-to="4">NEXT SCENE →</button>
+  </div>
+</section>
+
+<section class="screen" id="s4">
+  <div class="scene wide">
+    <p class="kicker">SCENE 03 · CHARACTER DEVELOPMENT</p>
+    <h2>The evolution of<br><em>Kuchupuchu.</em></h2>
+    <div class="timeline">
+      <article><small>LEVEL 01</small><h3>👶 Innocence</h3><p>Small. Sweet. Probably harmless.</p></article>
+      <article><small>LEVEL 02</small><h3>🧒 Plot Development</h3><p>Still innocent… allegedly.</p></article>
+      <article><small>LEVEL 03</small><h3>🤡 Chaos Arc</h3><p>The writers lost control.</p></article>
+      <article><small>LEVEL 04</small><h3>😎 Confidence Arc</h3><p>Started thinking she's cool.</p></article>
+      <article class="rare"><small>LEVEL 05 · CURRENT</small><h3>👸 Aakriti</h3><p>Unfortunately became pretty.</p><strong>RARE CHARACTER UNLOCKED ✦</strong></article>
+    </div>
+    <button class="next" data-to="5">THE ROAST BEGINS →</button>
+  </div>
+</section>
+
+<section class="screen" id="s5">
+  <div class="scene wide">
+    <p class="kicker">SCENE 04 · ROAST DEPARTMENT</p>
+    <h2>With love,<br><em>mostly.</em></h2>
+    <div class="roasts">
+      <button><b>01</b><span>Why do you reply so late?</span><i>Typing “haha” apparently requires a 3-business-day approval process.</i></button>
+      <button><b>02</b><span>Are you always right?</span><i>No. But I admire the confidence.</i></button>
+      <button><b>03</b><span>Why so dramatic?</span><i>It's not drama. It's premium emotional expression™.</i></button>
+      <button><b>04</b><span>Why are you so cute?</span><i>Suspicious question. This investigation is becoming personal. 👀</i></button>
+      <button class="classified"><b>05</b><span>CLASSIFIED FILE</span><i>I was going to roast you more… but you're too pretty today. 😌</i></button>
+    </div>
+    <button class="next" data-to="6">ENOUGH DAMAGE →</button>
+  </div>
+</section>
+
+<section class="screen" id="s6">
+  <div class="scene memories">
+    <p class="kicker">SCENE 05 · ARCHIVE</p>
+    <h2>Moments worth<br><em>keeping.</em></h2>
+    <p class="body">The frames are waiting for your photos.</p>
+    <div class="filmstrip">
+      <div>PHOTO 01</div><div>PHOTO 02</div><div>PHOTO 03</div>
+    </div>
+    <p class="hint">Add your photos later inside <code>assets/photos/</code>.</p>
+    <button class="next" data-to="7">ROLL THE FINAL SCENE →</button>
+  </div>
+</section>
+
+<section class="screen letter" id="s7">
+  <div class="letter-wrap">
+    <p class="kicker">SCENE 06 · NO JOKES THIS TIME</p>
+    <div id="typed"></div>
+    <button class="next hidden" id="letterNext">ONE LAST THING →</button>
+  </div>
+</section>
+
+<section class="screen finale" id="s8">
+  <div id="envelope">
+    <div class="envelope-icon">✉</div>
+    <p class="kicker">FINAL SCENE</p>
+    <h2>For the birthday girl.</h2>
+    <button class="enter" id="open">OPEN THE LETTER</button>
+  </div>
+  <div id="final" class="hidden">
+    <div class="counter" id="counter"></div>
+    <div id="reveal" class="hidden">
+      <div class="stars-title">✦　✧　✦</div>
+      <p class="kicker">28 SEPTEMBER</p>
+      <h1>Happy Birthday,<br><em>Aakriti.</em></h1>
+      <p class="aka">Kuchupuchu · Delhi girl · next level ✦</p>
+      <div class="final-copy">
+        <p>To the girl who somehow manages to be annoying, chaotic, adorable and beautiful at the same time—</p>
+        <p>I'm genuinely glad I got to know you. I hope this year brings you the kind of happiness that stays, the kind of memories you replay, and plenty of reasons to smile.</p>
+        <p class="flirt">And yes… you're looking unfairly pretty today. Someone needs to investigate that. 😌</p>
+        <p>Have the best birthday. Keep being you. Your fans are expecting the next level. 😂</p>
+      </div>
+      <p class="sign">— From one of your many fans 😉</p>
+      <button class="next" id="replay">↻ WATCH AGAIN</button>
+    </div>
+  </div>
+</section>
+<script src="app.js"></script>
+</body>
+</html>
